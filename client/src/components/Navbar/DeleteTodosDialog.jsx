@@ -27,7 +27,7 @@ const DeleteTodosDialog = ({ todosDispatch, setIsShowDeleteTodosDialog, authStat
                 <DialogTitle id="alert-dialog-title">{"Delete All?"}</DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        Are you sure you want to delete all your todos?
+                        Do you want to delete all your todos?
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
