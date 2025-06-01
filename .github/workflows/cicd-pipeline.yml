@@ -61,4 +61,4 @@ jobs:
           npm install
           # The 'serve' package is a dependency in this project, so we don't need to install it globally
           npm run build
-          pm2 serve build 80 --name "frontend" --spa
+          pm2 start "npx serve -s build -l 3000" --name "frontend" --cwd ~/todo-list-fullstack/client 
