@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import validator from 'validator'
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import Todo from './todos'
+import Todo from './todos.js'
 
 const userSchema = new mongoose.Schema({
     name: {

@@ -1,7 +1,7 @@
 import express from 'express';
-import User from '../models/user';
-import auth from '../middleware/auth';
-import { signUp, login, deleteUsers, deleteUser, logout } from '../controllers/user'
+import User from '../models/user.js';
+import auth from '../middleware/auth.js';
+import { signUp, login, deleteUsers, deleteUser, logout } from '../controllers/user.js'
 const router = new express.Router();
 
 router.post('/signup', signUp);

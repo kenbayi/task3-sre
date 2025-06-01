@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
-import "./db/mongoose";
-import todoRouter from "./routes/todo";
-import userRouter from "./routes/user";
-import { wakeUpDyno } from "./wakeUpDyno";
+import "./db/mongoose.js";
+import todoRouter from "./routes/todo.js";
+import userRouter from "./routes/user.js";
+import { wakeUpDyno } from "./wakeUpDyno.js";
 
 const app = express();
 app.use(cors());

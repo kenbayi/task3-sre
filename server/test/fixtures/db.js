@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
-import User from '../../models/user';
-import Todo from '../../models/todos';
+import User from '../../models/user.js';
+import Todo from '../../models/todos.js';
 
 export const userOneId = new mongoose.Types.ObjectId();
 export const userOne = {

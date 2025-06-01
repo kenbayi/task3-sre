@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import request from 'supertest';
-import app from '../index';
+import app from '../index.js';
 import {
     userOneId,
     userOne,
@@ -10,8 +10,8 @@ import {
     todoTwo,
     todoThree,
     setupDatabase
-} from './fixtures/db';
-import Todo from '../models/todos';
+} from './fixtures/db.js';
+import Todo from '../models/todos.js';
 
 beforeEach(setupDatabase);
 

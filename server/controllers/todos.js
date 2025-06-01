@@ -1,5 +1,5 @@
 import express from "express";
-import Todo from "../models/todos";
+import Todo from "../models/todos.js";
 const router = new express.Router();
 
 export const getTodos = async (req, res) => {

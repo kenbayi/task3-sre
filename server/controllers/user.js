@@ -1,5 +1,5 @@
 import express from 'express';
-import User from '../models/user';
+import User from '../models/user.js';
 const router = new express.Router();
 
 export const signUp = async (req, res) => {
