@@ -38,7 +38,7 @@ const SaveTodosDialog = ({ isSetAskForSaveTodo }) => {
                     No
                 </Button>
                 <Button onClick={handleSaveTodos} variant="contained" color="primary" autoFocus>
-                    Yes
+                    Sure
                 </Button>
             </DialogActions>
         </Dialog>
