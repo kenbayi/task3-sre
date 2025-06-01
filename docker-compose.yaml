@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  app:
+    build: ./client
+    ports: 
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    volumes: 
+      - ./client/src:/app/src
+    stdin_open: true
+    tty: true
+    env_file: 
+      - ./client/.env
+    depends_on: 
+      - server
+  server:
+    build: ./server
+    ports:
+      - '5000:5000'
+    volumes: 
+      - ./server:/app
+      - /app/node_modules
+    env_file: 
+      - ./server/config/dev.env
+    command: npm run dev
+  test:
+    build: ./server
+    ports:
+      - '5000:5000'
+    volumes: 
+      - ./server:/app
+      - /app/node_modules
+    env_file: 
+      - ./server/config/dev.env
+    command: npm run test
+
+    
