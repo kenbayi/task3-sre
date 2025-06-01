@@ -49,11 +49,12 @@ jobs:
           npm install
           echo "PORT=5000" > ./config/prod.env
           echo "MONGODB_URL=mongodb://localhost:27017/todo-app" >> ./config/prod.env
-          echo "JWT_SECRET=A_VERY_SECRET_AND_RANDOM_STRING_FOR_JWT_123!" >> ./config/prod.env
+          echo "2c274501988a303627696dbe0f1937ee5d8b5664c36959107f7cd58e89b65ee9" >> ./config/prod.env
           
           # Stop old processes and start backend using npx
           pm2 stop all || true
-          pm2 start "npx env-cmd -f ./config/prod.env node index.js" --name "backend"
+          pm2 start "npx env-cmd -f ./config/prod.env node index.js" --name "backend" --cwd ~/todo-list-fullstack/server
+
           
           # Setup and serve frontend on port 80
           cd ~/todo-list-fullstack/client
